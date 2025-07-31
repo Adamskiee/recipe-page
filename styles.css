@@ -2,7 +2,7 @@
   font-family: "Outfit";
   src: url("./assets/fonts/outfit/Outfit-VariableFont_wght.ttf")
     format("truetype");
-  font-weight: 400 600 700;
+  font-weight: 100 900;
   font-style: normal;
 }
 
@@ -31,6 +31,18 @@
   margin: 0;
 }
 
+p,
+th {
+  font-size: 1rem;
+  color: var(--stone-600);
+  font-weight: normal;
+}
+li,
+td {
+  color: var(--brown-800);
+  padding-block: 0.3rem;
+  padding-inline-start: 1.1rem;
+}
 body {
   background-color: var(--stone-100);
   font-family: "Outfit", sans-serif;
@@ -49,48 +61,39 @@ h1 {
 }
 header {
   font-size: 33.5px;
+  font-size: clamp(2rem, 5vw, 2.1rem);
   color: var(--brown-800);
-  margin-bottom: 1rem;
+  margin-block-end: 1rem;
 }
 h4 {
   color: var(--rose-800);
-  font-size: 20px;
+  font-size: clamp(1.125rem, 3vw, 1.25rem);
   font-weight: 600;
 }
-p,
-th {
-  font-size: 1rem;
-  color: var(--stone-600);
-  font-weight: normal;
-}
 ol {
-  padding-left: 1.4rem;
+  padding-inline-start: 1.4rem;
 }
 ul {
   list-style: none;
 }
 ul > li {
-  padding-right: 1.5rem;
-  padding-left: 2rem;
+  padding-inline-start: 2rem;
+  padding-inline-end: 1.5rem;
+  margin-inline-start: 0.5rem;
   position: relative;
   display: flex;
   align-items: center;
-  margin-left: 0.5rem;
 }
 ul > li::before {
   content: "•";
   position: absolute;
-  left: 0;
+  inset-inline-start: 0;
   font-size: 1rem;
 }
-li,
-td {
-  color: var(--brown-800);
-  padding: 0.3rem 0 0.3rem 1.1rem;
-}
+
 section:not([class~="overview"]):not([class~="ingredients"]) {
-  padding: 2rem 0;
-  border-top: 1px solid var(--stone-150);
+  padding-block: 2rem;
+  border-block-start: 1px solid var(--stone-150);
 }
 
 .container {
@@ -99,7 +102,7 @@ section:not([class~="overview"]):not([class~="ingredients"]) {
   width: 100%;
   padding: 2rem;
   border-radius: 12px;
-  margin: 6rem 0;
+  margin-block: 6rem;
   display: flex;
   flex-direction: column;
 }
@@ -114,42 +117,40 @@ section:not([class~="overview"]):not([class~="ingredients"]) {
   border-radius: 12px;
 }
 .overview .name {
-  font-size: 3.05rem;
+  font-size: clamp(2.5rem, 6vw, 3.05rem);
 }
 .overview .preparation {
-  margin-top: 2rem;
-}
-.overview .preparation {
-  padding-left: 1.75rem;
-  margin-bottom: 3rem;
+  margin-block-start: 2rem;
+  margin-block-end: 3rem;
+  padding-inline-start: 1.75rem;
 }
 .preparation > ul > li {
   color: var(--rose-800);
 }
 
 .ingredients > ul {
-  padding-bottom: 2rem;
+  padding-block-end: 2rem;
 }
 .ingredients > ul > li {
   color: var(--brown-800);
 }
 
 .nutrition {
-  padding-bottom: 0 !important;
+  padding-block-end: 0;
 }
 .nutrition > p {
-  margin-bottom: 1rem;
-  padding-right: 0.2rem;
+  margin-block-end: 1rem;
+  padding-inline-end: 0.2rem;
 }
 .nutrition .table {
   border-collapse: collapse;
   width: 100%;
 }
 .table .row:not(.row:last-child) {
-  border-bottom: 1px solid var(--stone-150);
+  border-block-end: 1px solid var(--stone-150);
 }
 .row > th {
-  text-align: left;
+  text-align: start;
   padding: 0.5rem 1.8rem;
 }
 .row > td {
@@ -163,6 +164,6 @@ section:not([class~="overview"]):not([class~="ingredients"]) {
     border-radius: 0;
   }
   .overview .name {
-    font-size: 2.75rem;
+    font-size: clamp(2.25rem, 5vw, 2.75rem);
   }
 }
