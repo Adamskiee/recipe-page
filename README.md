@@ -28,8 +28,8 @@ Mobile
 
 ### Links
 
-- Solution URL: [GitHub](https://github.com/Adamskiee/recipe-page)
-- Live Site URL: [Website](https://adamskiee.github.io/recipe-page/)
+- Solution URL: [GitHub](https://github.com/adamskiee-frontendmentor-projects/recipe-page)
+- Live Site URL: [Website](https://adamskiee-frontendmentor-projects.github.io/recipe-page/)
 
 ## My process
 
